@@ -12,7 +12,8 @@ set expandtab
 set shiftwidth=4
 set tabstop=4
 
-set textwidth=120
+set textwidth=80
+set colorcolumn=80
 
 set number relativenumber
 syntax on
@@ -21,15 +22,8 @@ syntax on
 set wildmenu
 
 " Colorscheme
+set termguicolors
 colorscheme apprentice
-
-" Plugin
-call plug#begin('~/.vim/plugged')
-Plug 'scrooloose/nerdtree'
-call plug#end()
 
 " Statusline
 set laststatus=2
-
-" NERDTree
-map <C-n> :NERDTreeToggle<CR>
