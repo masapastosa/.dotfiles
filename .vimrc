@@ -27,3 +27,6 @@ colorscheme apprentice
 
 " Statusline
 set laststatus=2
+
+" Fast buffer moving
+nnoremap gb :ls<CR>:b<Space>
