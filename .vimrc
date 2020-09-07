@@ -30,3 +30,10 @@ set laststatus=2
 
 " Fast buffer moving
 nnoremap gb :ls<CR>:b<Space>
+
+" Jump to the last position when reopening a file
+" Ctrl-O also works
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+    \| exe "normal! g'\"" | endif
+endif
