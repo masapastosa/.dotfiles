@@ -21,6 +21,10 @@ syntax on
 " Menu stuff
 set wildmenu
 
+if exists('$TMUX')
+" Colors in tmux for the kitty terminal in mac
+let &t_ut=''
+endif
 " Colorscheme
 set termguicolors
 colorscheme apprentice
@@ -37,3 +41,11 @@ if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
     \| exe "normal! g'\"" | endif
 endif
+
+let g:licenses_copyright_holders_name = 'Quim Aguado'
+
+" Count characters/lines when in visual mode
+set showcmd
+
+" Count search results
+set shm -=S
